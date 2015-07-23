@@ -1,3 +1,10 @@
+/**
+ * @FILENAME Actions.java
+ * 
+ * @PURPOSE  A container for all methods called in GoldsmithFinal.java.
+ *
+ * @author Justin Goldsmith
+ */
 
 package goldsmithfinal;
 import java.util.ArrayList;
@@ -7,12 +14,12 @@ import java.util.Random;
 
 public class Actions {
     
-    
+    // Data input method - used to collect user input, creates Customer objects,
+    // assigns object values, and puts customer object into customers ArrayList.
+    // No issues with logic, compilation, or runtime.
     public static void getInput(ArrayList<Customer> customers, Scanner input, Random idGenerator, boolean loop){
         
         while (!loop == false){
-            int whileCount = 0;
-            
             System.out.print("Name: ");
             String name = input.nextLine();
             
@@ -36,7 +43,7 @@ public class Actions {
             
 
             
-            for (int i = whileCount; i == whileCount; i++){
+            for (int i = Data.whileCount; i == Data.whileCount; i++){
                 customers.add(i, new Customer());
                 
                 customers.get(i).setName(name);
@@ -62,28 +69,28 @@ public class Actions {
         
     }
     
+    // Calculation method - used to calculate the customer's charges based on
+    // user input from getInput().
+    // totalChgs is currently returning 0.0 - debugging logic error in process.
     public static Double calcCharge(ArrayList<Customer> customers, Plan planA, Plan planB, Plan planC, double totalChgs){
         
-        double baseChg = 0.0;
-        double total = 0.0;
-        total = baseChg;
-        
         for(Customer customer : customers){
+            Data.total = Data.baseChg;
             
             switch(customer.getPlan()){
                 case 'A':
                 case 'a':
-                    baseChg = planA.getCost();
+                    Data.baseChg = planA.getCost();
                     planA.setPlanCusts();
                     break;
                 case 'B':
                 case 'b':
-                    baseChg = planB.getCost();
+                    Data.baseChg = planB.getCost();
                     planB.setPlanCusts();
                     break;
                 case 'C':
                 case 'c':
-                    baseChg = planC.getCost();
+                    Data.baseChg = planC.getCost();
                     planC.setPlanCusts();
                     break;
                 default:
@@ -93,23 +100,25 @@ public class Actions {
             }
             
             if(customer.isSmoker())
-                total += (baseChg * .05);
+                Data.total += (Data.baseChg * .05);
             
             if(customer.isDisability())
-                total += 76;
+                Data.total += 76;
             
             if(customer.isLtcare())
-                total += 110;
+                Data.total += 110;
             
-            customer.setEstimate(total);
-            totalChgs += total;
+            customer.setEstimate(Data.total);
+            totalChgs += Data.total;
             
         }
         
         return totalChgs;
     }
     
-    
+    // Output method - used to display object values for each object in the
+    // ArrayList of customer objects.
+    // No issues with logic, compliation, or runtime
     public static void displayResults(ArrayList<Customer> customers, double totalChgs, Plan planA, Plan planB, Plan planC){
         System.out.println();
         System.out.println();

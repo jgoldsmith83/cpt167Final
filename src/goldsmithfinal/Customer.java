@@ -1,14 +1,12 @@
 /**
- * FILENAME Customer.java
- * PURPOSE  Hold and maintain customer objects
+ * @FILENAME Customer.java
+ * 
+ * @PURPOSE  A class container for Customer object constructor methods,
+ *           setters, and getters.
+ *           Provides objects to store all user data as values.
  *
  * @author Justin Goldsmith
  */
-
-//System.out.println();
-//System.out.printf();
-
-
 package goldsmithfinal;
 
     public class Customer {

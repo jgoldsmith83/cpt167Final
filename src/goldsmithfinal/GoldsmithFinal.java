@@ -1,19 +1,11 @@
 /**
- * FILENAME GoldsmithMidterm.java
- * PURPOSE  Fulfill the midterm requirements
+ * @FILENAME GoldsmithMidterm.java
+ * 
+ * @PURPOSE  Calculate and provide an estimate for life insurance based on
+ *           customer conditions.
  *
  * @author Justin Goldsmith
  */
-
-/**
- *PSEUDOCODE
- * 
- * 
- *
- */
-
-//System.out.println();
-//System.out.printf();
 
 
 package goldsmithfinal;

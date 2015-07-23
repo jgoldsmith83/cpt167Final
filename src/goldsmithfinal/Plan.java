@@ -1,12 +1,13 @@
 /**
- * FILENAME Plan.java
- * PURPOSE  Hold and maintain plan objects
+ * @FILENAME Plan.java
+ * 
+ * @PURPOSE  A class container for Plan object constructor, setters, and getters.
+ *           Provides objects as containers to store life insurance plan data 
+ *           as values. 
  *
  * @author Justin Goldsmith
  */
 
-//System.out.println();
-//System.out.printf();
 package goldsmithfinal;
 
 
