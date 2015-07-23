@@ -19,10 +19,10 @@ public class Actions {
             System.out.print("Name: ");
             Data.name = Data.input.nextLine();
             
-            int id = Data.idGenerator.nextInt(1000);
+            Data.id = Data.idGenerator.nextInt(1000);
             
             System.out.print("Age: ");
-            int age = Data.input.nextInt();
+            Data.age = Data.input.nextInt();
             Data.input.nextLine();
             
             while(!Data.stopLoop == true){
@@ -32,7 +32,7 @@ public class Actions {
                 if(Data.plan == 'A' || Data.plan == 'B' || Data.plan == 'C')
                     Data.stopLoop = true;
                 else
-                    System.out.println("Invalid Plan option. Please choose plan A, B, or C.");
+                    System.out.println("\nInvalid Plan option. Plan choices are A, B, or C.\n");
             }
             
             Data.stopLoop = false;
@@ -51,8 +51,8 @@ public class Actions {
                 Data.customers.add(i, new Customer());
                 
                 Data.customers.get(i).setName(Data.name);
-                Data.customers.get(i).setId(id);
-                Data.customers.get(i).setAge(age);
+                Data.customers.get(i).setId(Data.id);
+                Data.customers.get(i).setAge(Data.age);
                 Data.customers.get(i).setPlan(Data.plan);
                 if ("Y".equals(Data.disabled))
                     Data.customers.get(i).setDisability(true);

@@ -32,6 +32,8 @@ public class Data {
     public static int arrayCount = 0;
     public static int whileCount = 0;
     public static String name;
+    public static int age;
+    public static int id;
     public static char plan;
     public static String smoker;
     public static String disabled;
