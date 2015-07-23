@@ -28,11 +28,21 @@ public class Data {
     public static Plan planC = new Plan(225.00);
     
     // iterator and loop variables - used in Actions.getInput()
-    public static boolean loop = true;
+    public static boolean stopLoop = false;
     public static int arrayCount = 0;
     public static int whileCount = 0;
+    public static String name;
+    public static char plan;
+    public static String smoker;
+    public static String disabled;
+    public static String ltc;
     
-    // Math variables - used in Actions.calcChgs()
+    
+    //Math variables - used in Actions.indivEstimate()
+    public static double estimate;
+    public static int index = 0;
+    
+    // Math variables - used in Actions.calcCharge()
     // totalChgs is return value but is currently returning 0.0
     public static double baseChg = 0.0;
     public static double total = 0.0;

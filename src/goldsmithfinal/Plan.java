@@ -15,7 +15,7 @@ public class Plan {
     
     private int planCusts;
     private double cost;
-    
+
     public Plan(double cost){
         this.planCusts = 0;
         this.cost = cost;

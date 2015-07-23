@@ -1,5 +1,5 @@
 /**
- * @FILENAME GoldsmithMidterm.java
+ * @FILENAME GoldsmithFinal.java
  * 
  * @PURPOSE  Calculate and provide an estimate for life insurance based on
  *           customer conditions.
@@ -20,7 +20,4 @@ public class GoldsmithFinal {
         
         Actions.displayResults();
     }
-    
-    
-    
 }
